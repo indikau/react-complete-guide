@@ -1,6 +1,7 @@
 import React, { Component, createElement } from "react";
 import "./App.css";
-import { render } from "@testing-library/react";
+import Person from "./Person/Person";
+import person from "./Person/Person";
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi!, I'm React App</h1>
         <p>This is really working!</p>
+        <Person />
       </div>
     );
 
