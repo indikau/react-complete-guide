@@ -1,7 +1,6 @@
-import React, { Component, createElement } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Person from "./Person/Person";
-import person from "./Person/Person";
 
 class App extends Component {
   render() {
@@ -9,9 +8,11 @@ class App extends Component {
       <div className="App">
         <h1>Hi!, I'm React App</h1>
         <p>This is really working!</p>
-        <Person />
-        <Person />
-        <Person />
+        <Person name="Indika" age="30" />
+        <Person name="Jenadi" age="12">
+          My Hobbies: Swimming
+        </Person>
+        <Person name="Ranuga" age="15" />
       </div>
     );
 
