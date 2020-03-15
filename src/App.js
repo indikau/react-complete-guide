@@ -15,10 +15,10 @@ const App = props => {
   const [otherState, setOtherState] = useState("Some other value");
 
   console.log(personsState, otherState);
-  const switchNameHandler = () => {
+  const switchNameHandler = newName => {
     setPersonsState({
       persons: [
-        { name: "Indika Rasika", age: "30" },
+        { name: newName, age: "30" },
         { name: "Jenadi", age: "12" },
         { name: "Ranuga", age: "7" }
       ]
@@ -29,7 +29,9 @@ const App = props => {
     <div className="App">
       <h1>Hi!, I'm React App</h1>
       <p>This is really working!</p>
-      <button onClick={switchNameHandler}>Switch Name</button>
+      <button onClick={switchNameHandler.bind(this, "Indika Rasika")}>
+        Switch Name
+      </button>
       <Person
         name={personsState.persons[0].name}
         age={personsState.persons[0].age}
@@ -37,6 +39,7 @@ const App = props => {
       <Person
         name={personsState.persons[1].name}
         age={personsState.persons[1].age}
+        click={switchNameHandler.bind(this, "Rasika")}
       >
         My Hobbies: Swimming
       </Person>
