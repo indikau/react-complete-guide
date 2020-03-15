@@ -29,7 +29,7 @@ const App = props => {
     <div className="App">
       <h1>Hi!, I'm React App</h1>
       <p>This is really working!</p>
-      <button onClick={switchNameHandler.bind(this, "Indika Rasika")}>
+      <button onClick={() => switchNameHandler("Indika Rasika")}>
         Switch Name
       </button>
       <Person
